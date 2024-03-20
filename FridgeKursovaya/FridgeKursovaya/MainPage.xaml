@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FridgeKursovaya.MainPage">
+
+    <StackLayout>
+        <Label Text="Рецепты" FontSize="40" TextColor="#006666" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Button x:Name="btnAdd" Text="Добавить" HorizontalOptions="CenterAndExpand" TextColor="#00ffff" BackgroundColor="#006666" Clicked="btnAdd_Clicked"/>
+        </StackLayout>
+
+        <CollectionView x:Name="recipeCollection" Margin="20" Background="#006666">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Image Source="{Binding Image}"/>
+                        <Label Text="{Binding Name}" TextColor="#00ffff" HorizontalOptions="Center" FontSize="25"/>
+                        <Label Text="{Binding Desc}" TextColor="#00ffff" FontSize="16"/>
+                        <Button x:Name="btnUpdate" Text="Изменить" Clicked="btnUpdate_Clicked" TextColor="#006666"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <AbsoluteLayout Background="#006666" Padding="5">
+            <Button x:Name="btnRecipe" Text="Рецепты" Clicked="btnRecipe_Clicked" TranslationX="10" TextColor="#006666"/>
+            <Button x:Name="btnProduct" Text="Продукты" Clicked="btnProduct_Clicked" TranslationX="125" TextColor="#006666"/>
+            <Button x:Name="btnAkkaunt" Text="Аккаунт" Clicked="btnAkkaunt_Clicked" TranslationX="250" TextColor="#006666"/>
+        </AbsoluteLayout>
+    </StackLayout>
+
+</ContentPage>

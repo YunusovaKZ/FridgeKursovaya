@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FridgeKursovaya.UpdateRecipe">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Изменить" FontSize="40" TextColor="#00ffff" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Entry x:Name="entName" Placeholder="Введите название" HorizontalOptions="CenterAndExpand" TextColor="#006666"/>
+                <Editor x:Name="entDesc" Placeholder="Введите описание" HorizontalOptions="CenterAndExpand" TextColor="#006666"/>
+                <Entry x:Name="entImage" Placeholder="Введите изображения" HorizontalOptions="CenterAndExpand" TextColor="#006666"/>
+                <Button x:Name="btnUpdate" Text="Изменить" HorizontalOptions="CenterAndExpand" TextColor="#00ffff" BackgroundColor="#006666" Clicked="btnUpdate_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

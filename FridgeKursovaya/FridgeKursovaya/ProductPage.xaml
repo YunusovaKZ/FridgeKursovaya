@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FridgeKursovaya.ProductPage">
+    
+        <StackLayout>
+        <Label Text="Продукты" FontSize="40" TextColor="#006666" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Button x:Name="btnAdd" Text="Добавить" HorizontalOptions="CenterAndExpand" TextColor="#00ffff" BackgroundColor="#006666" Clicked="btnAdd_Clicked"/>
+        </StackLayout>
+
+        <CollectionView x:Name="productCollection" Margin="20" Background="#006666">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Name}" TextColor="#00ffff" HorizontalOptions="Center" FontSize="25"/>
+                        <Label Text="{Binding Callor}" TextColor="#00ffff" FontSize="16"/>
+                        <Label Text="{Binding dateTime}" TextColor="#00ffff" FontSize="16"/>
+                        <Button x:Name="btnUpdate" Text="Изменить" Clicked="btnUpdate_Clicked" TextColor="#006666"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
